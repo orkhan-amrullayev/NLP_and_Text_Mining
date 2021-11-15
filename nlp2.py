@@ -22,23 +22,17 @@ from nltk.tokenize import word_tokenize
 text="/@@@111Faculty      of Economic Sciences,,,, as an independent unit of the University of Warsaw, affirms its commitment to basic goals and values specified in the Mission Statement of the University of Warsaw. In regard to the way in which the mission of our Alma Mater refers to the discipline represented by the Faculty of Economic Sciences, we define the following goal and value as our priorities of special importance: unity of research and teaching is the foundation of the activities at the Faculty of Economic Sciences."
 print(text)
 
-#----------------------------------------------------
+
 # Text parsing 
-#----------------------------------------------------
 
-#----------------------------------------------------
 # Preliminary cleaning
-#----------------------------------------------------
-
 
 # replace special characters from text. 
 # substituting "/", "@" and "|" and others by a space.
 text_clean = re.sub('[^a-zA-Z0-9 \n\.]', '', text)
 print(text_clean)
 
-#----------------------------------------------------
 # Cleaning text
-#----------------------------------------------------
     
 # a) to remove unnecessary spaces, punctuation and numbers
 
@@ -58,9 +52,9 @@ print(text_cleaner)
 # change to lowercase
 print(text_cleaner.lower())
 
-#----------------------------------------------------
+
 # Stopword removal 
-#----------------------------------------------------
+
 # In the case of "stopwords" in the package tm 
 # supported languages are: Danish, Dutch,
 # English, Finnish, French, German, Hungarian, Italian,
@@ -93,9 +87,8 @@ for w in stop_words_lst:
     print (filtered_text)
 
 
-#----------------------------------------------------
 # Stemming 
-#----------------------------------------------------
+
 
 # Stemming reduces words to their root form
 # For example, the reduction of words "move", "moved" 
@@ -112,9 +105,8 @@ for w in words:
     
     
 
-#----------------------------------------------------
 # Term frequency matrix
-#----------------------------------------------------
+
 
 wordlist = text_cleaner.split()
 
